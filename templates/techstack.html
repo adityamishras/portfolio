@@ -1,0 +1,52 @@
+<!-- Tech Stack Section -->
+<section id="tech" class="min-h-screen bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-4xl font-extrabold text-gray-900 mb-12">My Tech Stack</h2>
+
+    <div
+      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8"
+    >
+      {% set tech_stack = [ {'name': 'HTML', 'img':
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'},
+      {'name': 'CSS', 'img':
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'},
+      {'name': 'JavaScript', 'img':
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'},
+      {'name': 'PHP', 'img':
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg'},
+      {'name': 'MySQL', 'img':
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg'},
+      {'name': 'Flask', 'img':
+      'https://flask.palletsprojects.com/en/stable/_images/flask-name.svg'},
+      {'name': 'Jinja2', 'img':
+      'https://saidvandeklundert.net/img/jinja_logo.png'}, {'name': 'Python',
+      'img':
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'},
+      {'name': 'VS Code', 'img':
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg'},
+      {'name': 'ChatGPT', 'img':
+      'https://cdn-icons-png.flaticon.com/512/11865/11865326.png'}, {'name':
+      'Gemini', 'img':
+      'https://images.seeklogo.com/logo-png/61/2/gemini-icon-logo-png_seeklogo-611605.png'},
+      {'name': 'Bootstrap', 'img':
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg'},
+      {'name': 'Flowbite', 'img': 'https://flowbite.com/images/logo.svg'},
+      {'name': 'Tailwind', 'img':
+      'data:image/png;base64,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'},
+      {'name' : 'Github', 'img' :
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbqj9Ii13d6hx5a9kyLnC5A8A96LDSaSZv_w&s'
+      } ] %} {% for tech in tech_stack %}
+      <div
+        class="flex flex-col items-center justify-center p-4 bg-white rounded-xl shadow-md transform transition duration-300 hover:scale-105 cursor-pointer"
+      >
+        <img
+          src="{{ tech.img }}"
+          alt="{{ tech.name }}"
+          class="w-16 h-16 mb-4 object-contain"
+        />
+        <span class="text-gray-800 font-semibold">{{ tech.name }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

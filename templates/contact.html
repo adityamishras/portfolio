@@ -1,0 +1,133 @@
+{% extends 'base.html' %} {% block content %}
+
+<section class="bg-gray-900 flex items-center justify-center px-4 py-10 pt-24">
+  <div
+    class="bg-gray-800 text-white rounded-2xl shadow-2xl flex flex-col md:flex-row w-full max-w-6xl p-6 md:p-8"
+  >
+    <!-- Left Side Image -->
+    <div class="md:w-1/2 flex justify-center items-center mb-8 md:mb-0">
+      <img
+        src="{{ url_for('static', filename='images/illustration.svg') }}"
+        alt="Contact Illustration"
+        class="w-72 h-auto"
+      />
+    </div>
+
+    <!-- Right Side Form -->
+    <div class="md:w-1/2">
+      <h2 class="text-3xl sm:text-4xl font-extrabold mb-3 text-white">
+        Get in <span class="text-blue-500">Touch</span>
+      </h2>
+      <p class="text-base sm:text-lg text-gray-300 mb-5">
+        Have questions or want to work together? Fill out the form and we’ll be
+        in touch!
+      </p>
+
+      <form
+        id="contactForm"
+        method="POST"
+        action="/contact"
+        class="space-y-5 bg-gray-700 p-6 rounded-xl"
+      >
+        <div>
+          <label for="name" class="block text-sm font-semibold mb-1 text-white"
+            >Name</label
+          >
+          <input
+            type="text"
+            name="name"
+            id="name"
+            required
+            placeholder="Your full name"
+            class="w-full px-4 py-2 border border-gray-600 rounded-md bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-semibold mb-1 text-white"
+            >Email</label
+          >
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="you@example.com"
+            class="w-full px-4 py-2 border border-gray-600 rounded-md bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+        </div>
+
+        <div>
+          <label
+            for="message"
+            class="block text-sm font-semibold mb-1 text-white"
+            >Message</label
+          >
+          <textarea
+            name="message"
+            id="message"
+            rows="3"
+            required
+            placeholder="Write something..."
+            class="w-full px-4 py-2 border border-gray-600 rounded-md bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"
+          ></textarea>
+        </div>
+
+        <!-- Loader -->
+        <div id="loader" class="hidden text-center">
+          <div
+            class="w-4 h-4 border-4 border-blue-400 border-t-transparent rounded-full animate-spin mx-auto mb-2"
+          ></div>
+          <p class="text-xs text-gray-300">Sending...</p>
+        </div>
+
+        <!-- Success Message -->
+        <div
+          id="successMessage"
+          class="hidden bg-green-500 text-white p-3 rounded-md text-center"
+        >
+          Message sent successfully!
+        </div>
+
+        <button
+          type="submit"
+          id="submitBtn"
+          class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition transform hover:scale-105"
+        >
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById("contactForm");
+  const loader = document.getElementById("loader");
+  const submitBtn = document.getElementById("submitBtn");
+  const successMessage = document.getElementById("successMessage");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default form submission for demonstration
+
+    loader.classList.remove("hidden");
+    submitBtn.disabled = true;
+    submitBtn.classList.add("opacity-50", "cursor-not-allowed");
+    successMessage.classList.add("hidden"); // Hide success message if previously shown
+
+    // Simulate form submission with a delay
+    setTimeout(() => {
+      loader.classList.add("hidden"); // Hide loader
+      successMessage.classList.remove("hidden"); // Show success message
+      submitBtn.disabled = false; // Re-enable button
+      submitBtn.classList.remove("opacity-50", "cursor-not-allowed");
+
+      // Optionally, hide the success message after a few seconds
+      setTimeout(() => {
+        successMessage.classList.add("hidden");
+        form.reset(); // Clear the form fields
+      }, 3000); // Hide after 3 seconds
+    }, 2000); // Simulate 2-second submission time
+  });
+</script>
+{% if show_footer %} {% include 'footer.html' %} {% endif %} {% endblock %}

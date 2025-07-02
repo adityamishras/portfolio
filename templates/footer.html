@@ -1,0 +1,83 @@
+{% extends 'base.html' %} {% block content %}
+
+<!-- Footer Section -->
+<footer class="bg-gray-900 text-white py-12 px-6 sm:px-10 lg:px-20 w-full">
+  <div
+    class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10"
+  >
+    <!-- 1. Quick Links -->
+    <div>
+      <h3 class="text-lg font-bold text-blue-400 mb-4">Quick Links</h3>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li>
+          <a href="{{ url_for('home') }}" class="hover:text-blue-300">Home</a>
+        </li>
+        <li>
+          <a href="{{ url_for('about') }}" class="hover:text-blue-300">About</a>
+        </li>
+        <li>
+          <a href="{{ url_for('project') }}" class="hover:text-blue-300"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a href="{{ url_for('contact') }}" class="hover:text-blue-300"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- 2. What I Do -->
+    <div>
+      <h3 class="text-lg font-bold text-blue-400 mb-4">What I Do</h3>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li><i class="fas fa-code text-blue-400 mr-2"></i> Web Development</li>
+        <li>
+          <i class="fas fa-pencil-ruler text-blue-400 mr-2"></i> UI/UX Designing
+        </li>
+        <li>
+          <i class="fas fa-briefcase text-blue-400 mr-2"></i> Freelance Projects
+        </li>
+        <li><i class="fas fa-user text-blue-400 mr-2"></i> Portfolio Sites</li>
+      </ul>
+    </div>
+
+    <!-- 3. Get in Touch -->
+    <div>
+      <h3 class="text-lg font-bold text-blue-400 mb-4">Get in Touch</h3>
+      <ul class="text-sm text-gray-300 space-y-2">
+        <li>
+          <i class="fas fa-envelope text-blue-400 mr-2"></i>
+          <a
+            href="mailto:adityakumarsmishra@gmail.com"
+            class="hover:text-blue-300"
+          >
+            adityakumarsmishra@gmail.com
+          </a>
+        </li>
+        <li>
+          <i class="fas fa-paper-plane text-blue-400 mr-2"></i>
+          <a href="{{ url_for('contact') }}" class="hover:text-blue-300">
+            Use contact form
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 4. Logo and Rights -->
+    <div class="text-center lg:text-left">
+      <img
+        src="static/images/favicon.png"
+        alt="Your Logo"
+        class="h-16 mb-4 mx-auto lg:mx-0 rounded-lg shadow-md"
+      />
+      <p class="text-sm text-gray-400 mt-2">
+        &copy; {{ current_year }} Aditya Mishra<br />
+        All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+{% endblock %}
