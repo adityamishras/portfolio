@@ -1,0 +1,9 @@
+# Python environment
+env/
+__pycache__/
+*.pyc
+
+# VSCode and system files
+.vscode/
+.DS_Store
+*.log
