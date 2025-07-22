@@ -1,29 +1,41 @@
 {% extends 'base.html' %}{% block content %}
 
 <section
-  class="h-[calc(100vh-64px)] flex items-center justify-center bg-gray-50 px-4 sm:px-6 lg:px-8 mt-16"
+  class="transition-all duration-500 ease-in-out h-[calc(100vh-30vh)] flex items-center justify-center bg-gray-50 dark:bg-gray-900 px-4 sm:px-6 lg:px-8 mt-16"
   id="about"
   data-aos="fade-up"
 >
   <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-4xl font-extrabold text-gray-900 mb-6">About Me</h2>
+    <h2 class="text-4xl font-extrabold text-gray-900 dark:text-gray-100 mb-6">
+      About Me
+    </h2>
 
-    <p class="text-gray-700 text-lg leading-relaxed mb-6">
-      Hello! I’m <span class="font-semibold text-blue-600">Aditya Mishra</span>,
-      a full-stack web developer who enjoys building powerful and user-friendly
-      websites. I specialize in technologies like
-      <span class="font-semibold text-blue-700">
+    <p
+      class="transition-all duration-500 ease-in-out text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6"
+    >
+      Hello! I’m
+      <span
+        class="transition-all duration-500 ease-in-out font-semibold text-blue-600 dark:text-blue-400"
+        >Aditya Mishra</span
+      >, a full-stack web developer who enjoys building powerful and
+      user-friendly websites. I specialize in technologies like
+      <span class="font-semibold text-blue-700 dark:text-blue-400">
         HTML, CSS, JavaScript, PHP, Python, Flask, Jinja2, and MySQL</span
       >. <br /><br />
-      <span class="font-semibold text-blue-600"
+      <span
+        class="transition-all duration-500 ease-in-out font-semibold text-blue-600 dark:text-blue-400"
         >PHP is one of my favorite languages,</span
       >
       and it makes me feel very comfortable with development. However, due to
       the high demand for
-      <span class="font-semibold text-blue-600"> Python</span>, I've started
-      learning it and am currently working with both technologies, aiming to
-      gain expertise in both. I enjoy PHP and am also starting to like Python
-      due to its rich libraries and concise code. <br /><br />
+      <span
+        class="transition-all duration-500 ease-in-out font-semibold text-blue-600 dark:text-blue-400"
+      >
+        Python</span
+      >, I've started learning it and am currently working with both
+      technologies, aiming to gain expertise in both. I enjoy PHP and am also
+      starting to like Python due to its rich libraries and concise code.
+      <br /><br />
       I love turning creative ideas into clean, efficient, and visually
       appealing digital experiences. Whether it’s an educational platform or a
       business application, I aim to deliver smooth user interaction and elegant
@@ -35,7 +47,7 @@
 
     <a
       href="#contact"
-      class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
+      class="inline-block bg-blue-600 dark:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 dark:hover:bg-blue-800 transition duration-300"
     >
       Let’s Connect
     </a>
@@ -43,138 +55,160 @@
 </section>
 
 <section
-  class="py-16 bg-gray-100 px-4 sm:px-6 lg:px-8"
+  class="py-16 bg-gray-100 dark:bg-gray-800 px-4 sm:px-6 lg:px-8"
   id="skills"
   data-aos="fade-up"
 >
   <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-4xl font-extrabold text-gray-900 mb-8">
+    <h2 class="text-4xl font-extrabold text-gray-900 dark:text-gray-100 mb-8">
       My Technologies & Skills
     </h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
       <div
-        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+        class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
       >
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">HTML</h3>
-        <p class="text-gray-600 mb-4">
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">
+          HTML
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">
           The standard markup language for creating web pages.
         </p>
         <a
           href="https://developer.mozilla.org/en-US/docs/Web/HTML"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-blue-600 hover:underline"
+          class="text-blue-600 dark:text-blue-400 hover:underline"
           >Official Docs &rarr;</a
         >
       </div>
       <div
-        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+        class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
       >
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">CSS</h3>
-        <p class="text-gray-600 mb-4">
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">
+          CSS
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">
           Cascading Style Sheets, used for styling web pages.
         </p>
         <a
           href="https://developer.mozilla.org/en-US/docs/Web/CSS"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-blue-600 hover:underline"
+          class="text-blue-600 dark:text-blue-400 hover:underline"
           >Official Docs &rarr;</a
         >
       </div>
       <div
-        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+        class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
       >
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">JavaScript</h3>
-        <p class="text-gray-600 mb-4">
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">
+          JavaScript
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">
           A powerful programming language for interactive web experiences.
         </p>
         <a
           href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-blue-600 hover:underline"
+          class="text-blue-600 dark:text-blue-400 hover:underline"
           >Official Docs &rarr;</a
         >
       </div>
       <div
-        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+        class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
       >
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">PHP</h3>
-        <p class="text-gray-600 mb-4">
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">
+          PHP
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">
           A popular general-purpose scripting language for web development.
         </p>
         <a
           href="https://www.php.net/docs.php"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-blue-600 hover:underline"
+          class="text-blue-600 dark:text-blue-400 hover:underline"
           >Official Docs &rarr;</a
         >
       </div>
       <div
-        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+        class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
       >
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">Python</h3>
-        <p class="text-gray-600 mb-4">
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">
+          Python
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">
           A versatile language for web development, data science, and more.
         </p>
         <a
           href="https://docs.python.org/3/"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-blue-600 hover:underline"
+          class="text-blue-600 dark:text-blue-400 hover:underline"
           >Official Docs &rarr;</a
         >
       </div>
       <div
-        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+        class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
       >
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">Flask</h3>
-        <p class="text-gray-600 mb-4">A lightweight Python web framework.</p>
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">
+          Flask
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">
+          A lightweight Python web framework.
+        </p>
         <a
           href="https://flask.palletsprojects.com/en/latest/"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-blue-600 hover:underline"
+          class="text-blue-600 dark:text-blue-400 hover:underline"
           >Official Docs &rarr;</a
         >
       </div>
       <div
-        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+        class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
       >
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">Jinja2</h3>
-        <p class="text-gray-600 mb-4">
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">
+          Jinja2
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">
           A modern and designer-friendly templating language for Python.
         </p>
         <a
           href="https://jinja.palletsprojects.com/en/latest/"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-blue-600 hover:underline"
+          class="text-blue-600 dark:text-blue-400 hover:underline"
           >Official Docs &rarr;</a
         >
       </div>
       <div
-        class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+        class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
       >
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">MySQL</h3>
-        <p class="text-gray-600 mb-4">
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">
+          MySQL
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">
           A popular open-source relational database management system.
         </p>
         <a
           href="https://dev.mysql.com/doc/"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-blue-600 hover:underline"
+          class="text-blue-600 dark:text-blue-400 hover:underline"
           >Official Docs &rarr;</a
         >
       </div>
     </div>
-    <p class="text-gray-700 text-lg leading-relaxed mt-8">
-      I'm continuously **learning and refining my skills** in these
-      technologies, focusing on building a **strong foundation and gaining
-      hands-on expertise** to tackle diverse development challenges.
+    <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mt-8">
+      I'm continuously
+      <span class="font-semibold">learning and refining my skills</span> in
+      these technologies, focusing on building a
+      <span class="font-semibold"
+        >strong foundation and gaining hands-on expertise</span
+      >
+      to tackle diverse development challenges.
     </p>
   </div>
 </section>

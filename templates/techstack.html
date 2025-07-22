@@ -1,10 +1,15 @@
 <!-- Tech Stack Section -->
-<section id="tech" class="min-h-screen bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
+<section
+  id="tech"
+  class="transition-all duration-500 ease-in-out min-h-screen bg-gray-50 dark:bg-gray-900 py-20 px-4 sm:px-6 lg:px-8"
+>
   <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-4xl font-extrabold text-gray-900 mb-12">My Tech Stack</h2>
+    <h2 class="text-4xl font-extrabold text-gray-900 dark:text-gray-100 mb-12">
+      My Tech Stack
+    </h2>
 
     <div
-      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8"
+      class="transition-all duration-500 ease-in-out grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8"
     >
       {% set tech_stack = [ {'name': 'HTML', 'img':
       'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'},
@@ -37,14 +42,16 @@
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbqj9Ii13d6hx5a9kyLnC5A8A96LDSaSZv_w&s'
       } ] %} {% for tech in tech_stack %}
       <div
-        class="flex flex-col items-center justify-center p-4 bg-white rounded-xl shadow-md transform transition duration-300 hover:scale-105 cursor-pointer"
+        class="flex flex-col items-center justify-center p-4 bg-white dark:bg-gray-800 rounded-xl shadow-md transform transition duration-300 hover:scale-105 cursor-pointer"
       >
         <img
           src="{{ tech.img }}"
           alt="{{ tech.name }}"
           class="w-16 h-16 mb-4 object-contain"
         />
-        <span class="text-gray-800 font-semibold">{{ tech.name }}</span>
+        <span class="text-gray-800 dark:text-gray-100 font-semibold"
+          >{{ tech.name }}</span
+        >
       </div>
       {% endfor %}
     </div>

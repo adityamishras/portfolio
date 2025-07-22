@@ -1,27 +1,42 @@
 {% extends 'base.html' %} {% block content %}
 
 <!-- Footer Section -->
-<footer class="bg-gray-900 text-white py-12 px-6 sm:px-10 lg:px-20 w-full">
+<footer
+  class="transition-all duration-500 ease-in-out bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white py-12 px-6 sm:px-10 lg:px-20 w-full"
+>
   <div
     class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10"
   >
+    <!-- Dark Mode Toggle -->
+    <div>
+      <label class="inline-flex items-center cursor-pointer">
+        <input type="checkbox" id="theme-checkbox" class="sr-only peer" />
+        <div
+          class="relative w-11 h-6 bg-gray-400 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-6 rtl:peer-checked:after:-translate-x-full after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"
+        ></div>
+        <span class="ms-3 text-sm font-medium text-gray-800 dark:text-gray-300">
+          Dark Mode
+        </span>
+      </label>
+    </div>
+
     <!-- 1. Quick Links -->
     <div>
-      <h3 class="text-lg font-bold text-blue-400 mb-4">Quick Links</h3>
-      <ul class="space-y-2 text-sm text-gray-300">
+      <h3 class="text-lg font-bold text-blue-500 mb-4">Quick Links</h3>
+      <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
         <li>
-          <a href="{{ url_for('home') }}" class="hover:text-blue-300">Home</a>
+          <a href="{{ url_for('home') }}" class="hover:text-blue-400">Home</a>
         </li>
         <li>
-          <a href="{{ url_for('about') }}" class="hover:text-blue-300">About</a>
+          <a href="{{ url_for('about') }}" class="hover:text-blue-400">About</a>
         </li>
         <li>
-          <a href="{{ url_for('project') }}" class="hover:text-blue-300"
+          <a href="{{ url_for('project') }}" class="hover:text-blue-400"
             >Projects</a
           >
         </li>
         <li>
-          <a href="{{ url_for('contact') }}" class="hover:text-blue-300"
+          <a href="{{ url_for('contact') }}" class="hover:text-blue-400"
             >Contact</a
           >
         </li>
@@ -30,8 +45,8 @@
 
     <!-- 2. What I Do -->
     <div>
-      <h3 class="text-lg font-bold text-blue-400 mb-4">What I Do</h3>
-      <ul class="space-y-2 text-sm text-gray-300">
+      <h3 class="text-lg font-bold text-blue-500 mb-4">What I Do</h3>
+      <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
         <li><i class="fas fa-code text-blue-400 mr-2"></i> Web Development</li>
         <li>
           <i class="fas fa-pencil-ruler text-blue-400 mr-2"></i> UI/UX Designing
@@ -45,22 +60,22 @@
 
     <!-- 3. Get in Touch -->
     <div>
-      <h3 class="text-lg font-bold text-blue-400 mb-4">Get in Touch</h3>
-      <ul class="text-sm text-gray-300 space-y-2">
+      <h3 class="text-lg font-bold text-blue-500 mb-4">Get in Touch</h3>
+      <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2">
         <li>
           <i class="fas fa-envelope text-blue-400 mr-2"></i>
           <a
             href="mailto:adityakumarsmishra@gmail.com"
-            class="hover:text-blue-300"
+            class="hover:text-blue-400"
           >
             adityakumarsmishra@gmail.com
           </a>
         </li>
         <li>
           <i class="fas fa-paper-plane text-blue-400 mr-2"></i>
-          <a href="{{ url_for('contact') }}" class="hover:text-blue-300">
-            Use contact form
-          </a>
+          <a href="{{ url_for('contact') }}" class="hover:text-blue-400"
+            >Use contact form</a
+          >
         </li>
       </ul>
     </div>
@@ -68,11 +83,11 @@
     <!-- 4. Logo and Rights -->
     <div class="text-center lg:text-left">
       <img
-        src="static/images/favicon.png"
-        alt="Your Logo"
+        src="{{ url_for('static', filename='images/favicon.png') }}"
+        alt="Logo"
         class="h-16 mb-4 mx-auto lg:mx-0 rounded-lg shadow-md"
       />
-      <p class="text-sm text-gray-400 mt-2">
+      <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
         &copy; {{ current_year }} Aditya Mishra<br />
         All rights reserved.
       </p>
